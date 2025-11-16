@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RKMODS – Minecraft Mods</title>
+<style>
+    :root {
+        --bg: #f8f8f8;
+        --text: #222;
+        --accent: #ff6edb;
+        --accent2: #6affd3;
+        --card-bg: #ffffff;
+        --muted: #666;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, var(--accent), var(--accent2));
+        color: var(--text);
+    }
+
+    header {
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    #logo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .section {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 30px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #fff;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    /* Search Box */
+    .search-box {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 25px auto;
+        display: flex;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px 0 0 6px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+    }
+
+    .search-box button {
+        padding: 10px 20px;
+        border: none;
+        background: var(--accent);
+        color: #fff;
+        font-weight: bold;
+        border-radius: 0 6px 6px 0;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .search-box button:hover {
+        background: #ff4ccf;
+    }
+
+    /* Mod Card Style */
+    .card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        margin-bottom: 30px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+    .thumb img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .meta {
+        margin-top: 10px;
+    }
+
+    .download {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 16px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .download:hover {
+        background: #ff4ccf;
+    }
+
+    /* Support Page */
+    .support {
+        text-align: center;
+        color: #fff;
+        margin-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .support a {
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
+
+<script>
+function searchMods() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let text = cards[i].innerText.toLowerCase();
+        cards[i].style.display = text.includes(input) ? "grid" : "none";
+    }
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <img id="logo" src="https://i.postimg.cc/MHVG5gxn/file-00000000a97c7208a1323d87a5b9c916.png">
+    RKMODS – Minecraft Mods
+</header>
+
+<div class="section">
+
+    <div class="search-box">
+        <input id="search" type="text" placeholder="Search mods..." onkeyup="searchMods()">
+        <button onclick="searchMods()">Search</button>
+    </div>
+
+    <h2>All Mods</h2>
+
+    <!-- Utility Inventory -->
+    <div class="card">
+        <div class="thumb">
+            <img src="https://i.postimg.cc/nz9Y1VWt/Screenshot-20251116-073403.jpg" alt="">
+        </div>
+        <div>
+            <h3>Utility Inventory</h3>
+            <p>This texture pack allows you to access your inventory in-game more easily with extra utility features.</p>
+            <div class="meta">
+                Version: v1.0 • Minecraft 1.21+ <br>
+                <a class="download" href="https://www.mediafire.com/file/qf02hp3wvyvtcxa/Utility+Inventory+v0.3.1.mcpack/file" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Replay Craft -->
+    <div class="card">
+        <div class="thumb">
+            <img src="https://i.postimg.cc/nz68dzcW/IMG-20251116-074506.jpg" alt="">
+        </div>
+        <div>
+            <h3>Replay Craft</h3>
+            <p>This mod allows you to make cinematic scenes and replays like Java Edition for MCPE.</p>
+            <div class="meta">
+                Version: v1.0 • Minecraft 1.21+ <br>
+                <a class="download" href="https://www.mediafire.com/file/mpkulfwg179lbme/ReplayCraft-v2.5.1.mcaddon/file" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Insta Farm Addon -->
+    <div class="card">
+        <div class="thumb">
+            <img src="https://i.postimg.cc/vBS8Gb8Q/IMG-20251116-075511.jpg" alt="">
+        </div>
+        <div>
+            <h3>Insta Farm Addon</h3>
+            <p>This mod allows you to instantly create farms using crafting recipes and paste them into your world.</p>
+            <div class="meta">
+                Version: 1.0 • Minecraft 1.21+ <br>
+                <a class="download" href="https://www.mediafire.com/file/jjei1sq190lice6/Insta-Farm-Addon-MCPE-1.21.mcaddon/file" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bedrock UI+ -->
+    <div class="card">
+        <div class="thumb">
+            <img src="https://i.postimg.cc/KYBsZNZV/IMG-20251116-080334.jpg" alt="">
+        </div>
+        <div>
+            <h3>Bedrock UI+ v1.0</h3>
+            <p>This mod allows you to show detailed information about your world and improve your UI experience.</p>
+            <div class="meta">
+                Version: 1.0 • Minecraft 1.21+ <br>
+                <a class="download" href="https://www.mediafire.com/file/1o32jwiuw0k8uzz/Bedrock_UI%252B_.mcpack/file" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Support Section -->
+<div class="support">
+    <h2>Need Support?</h2>
+    <p>If you have any problem, send me an email:</p>
+    <a href="mailto:rk3432915@gmail.com">rk3432915@gmail.com</a>
+</div>
+
+</body>
+</html>
